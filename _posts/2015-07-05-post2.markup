@@ -2,7 +2,8 @@
 layout: post
 section-type: post
 title: "Post # 2"
-image: model-whitebg.jpeg
+image: model-whitebg
+image-extension: jpeg
 image-position: center
 category: Category
 tags: [ 'tag1' ]

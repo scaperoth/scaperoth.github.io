@@ -44,11 +44,6 @@ a{
     margin:0;
 }
 
-/*SECTIONS*/
-#social{
-        padding:40px 0;
-    }
-
 
 /*NAVIGATION*/
 .navbar-custom{ 
@@ -151,6 +146,17 @@ a{
 }
 
 /*SINGLE POSTS*/
+
+#post-image{
+    min-height:300px;
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    img{
+        max-height:1200px;
+    }
+}
+
 #page-content{
     padding-top:40px;
 }
@@ -193,6 +199,7 @@ a{
 }
 
 #social{
+        padding:40px 0;
     a{
         color:#fff;
     }
@@ -209,13 +216,14 @@ a{
     img{
         z-index:0;
     }
-    .post-container{
+
+    .post-container, .no-image{
         overflow:hidden;
         background-image: none;
         background-size:cover;
         height:369px;
         background-repeat: no-repeat;
-    background-position: center center;            /* optionally, center the image */
+        background-position: center center;            /* optionally, center the image */
         .post-overlay{
             background-color:#000;
             position:absolute;
@@ -223,11 +231,7 @@ a{
             bottom:0;
             height:100%;
             width:100%;
-            opacity:0;
-            transition: all $fast-transition-time ease-in-out;
-            -webkit-transition: all $fast-transition-time ease-in-out;
-            -o-transition: all $fast-transition-time ease-in-out;
-            -moz-transition: all $fast-transition-time ease-in-out;
+            opacity:.2;
         }
         .post-information{
             color:$white;
@@ -235,40 +239,64 @@ a{
             border-top:2px solid #777;
             z-index: 999;
             position:absolute;
-            bottom:-20%;
-            transition: all $fast-transition-time ease-in-out;
-            -webkit-transition: all $fast-transition-time ease-in-out;
-            -o-transition: all $fast-transition-time ease-in-out;
-            -moz-transition: all $fast-transition-time ease-in-out;
+            bottom:25%;
         
                 a, small{
                     color:#fff;
                 }
         }
-
-
-
-        &:hover .post-information{
-            bottom:20%;
-            transition: all $fast-transition-time ease-in-out;
-            -webkit-transition: all $fast-transition-time ease-in-out;
-            -o-transition: all $fast-transition-time ease-in-out;
-            -moz-transition: all $fast-transition-time ease-in-out;
-        }
-
-        &:hover .post-overlay{
-            opacity:.4;
-            transition: all $fast-transition-time ease-in-out;
-            -webkit-transition: all $fast-transition-time ease-in-out;
-            -o-transition: all $fast-transition-time ease-in-out;
-            -moz-transition: all $fast-transition-time ease-in-out;
-        }
-    }
     
+    }
+
+    .no-image { 
+        .post-overlay{
+            opacity:.5;
+        }
+
+    }
 }
 
 @media(min-width:$medium-break-point) {
 
+    #blog-posts{
+        .post-container{
+            .post-overlay{
+                opacity:0;
+                transition: all $fast-transition-time ease-in-out;
+                -webkit-transition: all $fast-transition-time ease-in-out;
+                -o-transition: all $fast-transition-time ease-in-out;
+                -moz-transition: all $fast-transition-time ease-in-out;
+            }
+            .post-information{
+                bottom:-30%;
+                transition: all $fast-transition-time ease-in-out;
+                -webkit-transition: all $fast-transition-time ease-in-out;
+                -o-transition: all $fast-transition-time ease-in-out;
+                -moz-transition: all $fast-transition-time ease-in-out;
+            
+            }
+
+            &:hover .post-information{
+                bottom:20%;
+                transition: all $fast-transition-time ease-in-out;
+                -webkit-transition: all $fast-transition-time ease-in-out;
+                -o-transition: all $fast-transition-time ease-in-out;
+                -moz-transition: all $fast-transition-time ease-in-out;
+            }
+
+            &:hover .post-overlay{
+                opacity:.4;
+                transition: all $fast-transition-time ease-in-out;
+                -webkit-transition: all $fast-transition-time ease-in-out;
+                -o-transition: all $fast-transition-time ease-in-out;
+                -moz-transition: all $fast-transition-time ease-in-out;
+            }
+        }
+    
+}
+
+    #post-image{
+    }
     .navbar-custom{
 
         .navbar-brand{
@@ -292,6 +320,8 @@ a{
 }
 
 @media(min-width:$large-break-point) {
+    #post-image{
+    }
     .single-post, #page-content{
         .row{
             div > *{

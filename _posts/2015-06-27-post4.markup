@@ -1,8 +1,9 @@
 ---
 layout: post
 section-type: post
-title: Poast #4
-image: mist.jpeg
+title: NO IMAGE #4
+image: 
+image-extension: jpeg
 image-position: top
 category: tech
 tags: [ 'tag1' ]

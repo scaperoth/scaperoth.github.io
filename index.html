@@ -5,11 +5,11 @@ layout: home
 {% assign post2 = site.posts[1] %}
 <style>
 .sub-item-top {
-    background-image: url('/img/{{ post1.image }}');
+    background-image: url('/img/{{ post1.image }}.{{ post1.image-extension }}');
     background-position:{{ post1.image-position }};
 }
 .sub-item-bottom {
-    background-image: url('/img/{{ post2.image }}');
+    background-image: url('/img/{{ post2.image }}.{{ post2.image-extension }}');
     background-position: {{ post2.image-position }};
 }
 </style>

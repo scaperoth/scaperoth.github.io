@@ -27,7 +27,11 @@
                         </h1>
                         {% for post in paginator.posts %}
                         <a href="{{ post.url }}">
-                        <div class="col-sm-4 no-padding post-container" style="background-image: url('/img/{{post.image}}');">
+                        {% if post.image %}
+                        <div class="col-sm-4 no-padding post-container" style="background-image: url('/img/{{post.image}}-thumb.{{post.image-extension}}');">
+                        {% else %}
+                        <div class="col-sm-4 no-padding no-image"> 
+                        {% endif %}
                             <div class="post-overlay"></div>
                             <div class="post-information">
                                 <div class="post-title">

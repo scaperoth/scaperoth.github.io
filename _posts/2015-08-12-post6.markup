@@ -2,8 +2,9 @@
 layout: post
 section-type: post
 title: "Recent Post"
-image: food.jpg
-image-position: bottom
+image: food
+image-extension: jpg
+image-position: center
 category: Category
 tags: [ 'tag1', 'tag2', tag3 ]
 ---

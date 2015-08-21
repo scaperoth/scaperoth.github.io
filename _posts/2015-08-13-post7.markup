@@ -2,8 +2,9 @@
 layout: post
 section-type: post
 title: "More Recent Post"
-image: fashion-man.jpg
-image-position: bottom
+image: fashion-man
+image-extension: jpg
+image-position: center
 category: Category
 tags: [ 'tag1', 'tag2', tag3 ]
 ---

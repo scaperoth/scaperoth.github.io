@@ -3,7 +3,11 @@
     {% include head.html %}
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
         {% include navigation.html %}
-        <img src="/img/{{ page.image }}">
+        <div id="post-image">
+            {% if page.image %}
+            <img src="/img/{{ page.image }}.{{page.image-extension}}" align="middle">
+            {% endif %}
+        </div>
         <section id="{{ page.title }}" class="container-fluid single-post content-section text-center">
             <div class="row">
                 <div id="post-meta" class="col-lg-12 ">
@@ -26,7 +30,7 @@
     </section>
     <section id="discussion">
         <div class="row">
-            <div class="col-lg-5 centered col-sm-offset-5">
+            <div class="col-sm-6  col-sm-offset-3">
                 {% include share.html %}
                 {% include comments.html %}
             </div>

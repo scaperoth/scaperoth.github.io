@@ -7,7 +7,7 @@ keywords: ""
 favicon: ""
 black-favicon: ""
 google-tracking-id: ""
-disqus-shortname: false
+disqus-shortname: "scaperoth"
 permalink: "blog/:title"
 
 # Navigation bar links
