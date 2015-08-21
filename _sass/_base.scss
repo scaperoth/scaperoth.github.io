@@ -1,0 +1,205 @@
+/* 
+ * split.css.scss
+ * @author Mat Scaperoth: scaperoth.com
+ * controls scss for all pages
+ */
+
+body {
+    padding: 0;
+    font-family:$body-font;
+}
+
+
+hr{
+    border:1px dotted;
+    color:$white;
+}
+
+.navbar-custom{ 
+
+    &.top-nav-collapse{
+        background:#000;
+        opacity:.7;
+    }
+    .navbar-brand{
+        padding-top:30px;
+        color:$text-color;
+        @include font-face('header');
+
+        &:hover{
+            color:$white;
+        }
+    }
+
+    .nav li a{
+        color:$text-color;
+        border-bottom:1px solid transparent;
+        transition: all $fast-transition-time ease-in-out;
+        -webkit-transition: all $fast-transition-time ease-in-out;
+        -o-transition: all $fast-transition-time ease-in-out;
+        -moz-transition: all $fast-transition-time ease-in-out;
+
+        &:hover{
+            color: $white;
+            background:transparent;
+            border-bottom:1px solid $white;
+            transition: all $fast-transition-time ease-in-out;
+            -webkit-transition: all $fast-transition-time ease-in-out;
+            -o-transition: all $fast-transition-time ease-in-out;
+            -moz-transition: all $fast-transition-time ease-in-out;
+        }
+    }
+    .nav li.active{
+        color:#444;
+    }
+
+    &.top-nav-collapse{
+        .navbar-brand{
+                color:#fff;
+            
+        }
+        .navbar-brand:hover{
+                color:#ccc;
+            
+        }
+        .nav li a{
+            color:#fff;
+        }
+        .nav li a:hover{
+            color: #ccc;
+            background:transparent;
+            border-bottom:1px solid #ccc;
+            transition: all $fast-transition-time ease-in-out;
+            -webkit-transition: all $fast-transition-time ease-in-out;
+            -o-transition: all $fast-transition-time ease-in-out;
+            -moz-transition: all $fast-transition-time ease-in-out;
+        
+        }
+    }
+
+}
+
+a{
+    &:hover{
+    text-decoration: none;
+}
+
+    &:visited{
+    }
+}
+
+
+
+.col-center{
+    width:50%;
+    margin:0 auto;
+}
+
+/*SECTIONS*/
+#social{
+        padding:40px 0;
+    }
+
+/*SINGLE PAGE*/
+.single-page{
+    #page-title {
+        background:url("/img/sand.jpeg");
+        background-size:cover;
+        height:500px;
+        position:relative;
+        h1{
+            margin-top:200px;
+        }
+
+        .content-section{
+         padding-top:40px;
+        }
+    }
+
+}
+
+/*SINGLE POSTS*/
+#page-content{
+    padding-top:40px;
+}
+
+#post-title{
+    padding:20px;
+}
+
+.container-fluid{
+    padding:0;
+    margin:0;
+}
+
+.single-post .row, #page-content .row{
+
+    div > *{
+        width:100%;
+        padding:10px 30px;
+        margin:0 auto;
+    }
+
+    div{
+        padding:0;
+    }
+
+
+        img{
+            width:100%;
+        }
+
+        iframe {
+            padding:0;
+        }
+
+    div.full, div.full >*{
+            padding:10px 0;
+            margin:0;
+            width:100%;
+    }
+            
+}
+
+#discussion{
+    padding:0 20px;
+}
+
+
+@media(min-width:$medium-break-point) {
+
+    .navbar-custom{
+
+        .navbar-brand{
+            padding-top:25px;
+        }
+    }
+
+    
+    .single-post, #page-content{
+        .row{
+            div > *{
+                width:75%;
+            }
+            div.full, div.full >*{
+                    padding:20px 0;
+            }
+            
+        }
+    }
+}
+
+@media(min-width:$large-break-point) {
+    .single-post, #page-content{
+        .row{
+            div > *{
+                width:60%;
+            }
+
+            div.full, div.full >*{
+                    padding:10px 0;
+            }
+            
+        }
+    }
+}
