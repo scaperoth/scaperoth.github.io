@@ -45,7 +45,7 @@ $min-height-md: 900px;
 $min-height-lg: 100%;
 
 /*COLOR OPTIONS*/
-
+$brand-color:blue;
 $text-color: #444;
 $white: #f9f9f9;
 
@@ -65,6 +65,9 @@ $right-side-top-overlay-color: #fff;
 $right-side-bottom-content-color:$white;
 $right-side-bottom-overlay-color: #000;
 $right-side-background-color: #fafafa;
+
+/*BORDER RADIUS*/
+$border-radius:5px;
 
 /*OPACITY*/
 $home-header-content-opacity:1;

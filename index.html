@@ -3,7 +3,6 @@ layout: home
 ---
 {% assign post1 = site.posts.first %}
 {% assign post2 = site.posts[1] %}
-
 <style>
 .sub-item-top {
     background-image: url('/img/{{ post1.image }}');
@@ -21,18 +20,20 @@ layout: home
             <h1>Split Layout</h1>
         </header>
         <div class="intro-content">
-            <a href="/about">
             <h1 id="main-header">
             <span>Site Title </span>
             <hr/>
             <span>Subtitle</span>
             </h1>
-            </a>
+            <div class="home-link-container">
+                <ul>
+                    <li><a class="home-link" href="about">about</a></li>
+                    <li><a class="home-link" href="blog">blog</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-
     <div class="right-side col-md-6 col-xs-12 pull-right">
-
         <a href="{{ post1.url }}">
         <div class="home-sub-item sub-item-top col-xs-12 hover-zoom">
             <div class="intro-background"></div>

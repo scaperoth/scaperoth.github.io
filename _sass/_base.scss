@@ -4,6 +4,8 @@
  * controls scss for all pages
  */
 
+/*GLOBAL*/
+
 body {
     padding: 0;
     font-family:$body-font;
@@ -15,6 +17,40 @@ hr{
     color:$white;
 }
 
+ul,ol{
+    list-style:inside;
+}
+
+
+a{
+    &:hover{
+    text-decoration: none;
+}
+
+    &:visited{
+    }
+}
+
+
+.col-center{
+    width:50%;
+    margin:0 auto;
+}
+
+.no-padding{
+    padding:0;
+}
+.no-margin{
+    margin:0;
+}
+
+/*SECTIONS*/
+#social{
+        padding:40px 0;
+    }
+
+
+/*NAVIGATION*/
 .navbar-custom{ 
 
     &.top-nav-collapse{
@@ -79,43 +115,39 @@ hr{
 
 }
 
-a{
-    &:hover{
-    text-decoration: none;
-}
+.content-section{
+    text-align:left;
 
-    &:visited{
+    #post-meta{
+        text-align: center;
     }
 }
 
-
-
-.col-center{
-    width:50%;
-    margin:0 auto;
-}
-
-/*SECTIONS*/
-#social{
-        padding:40px 0;
-    }
 
 /*SINGLE PAGE*/
 .single-page{
     #page-title {
-        background:url("/img/sand.jpeg");
+        
+            text-align:center;
+        background:transparent;
         background-size:cover;
         height:500px;
         position:relative;
         h1{
-            margin-top:200px;
+            margin-top:160px;
+            padding:0;
         }
-
         .content-section{
          padding-top:40px;
         }
     }
 
+}
+
+.section-title{
+    text-align: center;
+    text-decoration: underline;
+    padding:20px;
 }
 
 /*SINGLE POSTS*/
@@ -141,12 +173,11 @@ a{
     }
 
     div{
-        padding:0;
+        padding:0px;
     }
 
-
-        img{
-            width:100%;
+        img, iframe{
+            width:100% !important;
         }
 
         iframe {
@@ -154,17 +185,87 @@ a{
         }
 
     div.full, div.full >*{
-            padding:10px 0;
+            padding:10px 0 !important;
             margin:0;
-            width:100%;
+            width:100% !important;
     }
             
+}
+
+#social{
+    a{
+        color:#fff;
+    }
 }
 
 #discussion{
     padding:0 20px;
 }
 
+
+/*BLOG PAGE*/
+
+#blog-posts{
+    img{
+        z-index:0;
+    }
+    .post-container{
+        overflow:hidden;
+        background-image: none;
+        background-size:cover;
+        height:369px;
+        background-repeat: no-repeat;
+    background-position: center center;            /* optionally, center the image */
+        .post-overlay{
+            background-color:#000;
+            position:absolute;
+            top:0;
+            bottom:0;
+            height:100%;
+            width:100%;
+            opacity:0;
+            transition: all $fast-transition-time ease-in-out;
+            -webkit-transition: all $fast-transition-time ease-in-out;
+            -o-transition: all $fast-transition-time ease-in-out;
+            -moz-transition: all $fast-transition-time ease-in-out;
+        }
+        .post-information{
+            color:$white;
+            padding:10px 20px;
+            border-top:2px solid #777;
+            z-index: 999;
+            position:absolute;
+            bottom:-20%;
+            transition: all $fast-transition-time ease-in-out;
+            -webkit-transition: all $fast-transition-time ease-in-out;
+            -o-transition: all $fast-transition-time ease-in-out;
+            -moz-transition: all $fast-transition-time ease-in-out;
+        
+                a, small{
+                    color:#fff;
+                }
+        }
+
+
+
+        &:hover .post-information{
+            bottom:20%;
+            transition: all $fast-transition-time ease-in-out;
+            -webkit-transition: all $fast-transition-time ease-in-out;
+            -o-transition: all $fast-transition-time ease-in-out;
+            -moz-transition: all $fast-transition-time ease-in-out;
+        }
+
+        &:hover .post-overlay{
+            opacity:.4;
+            transition: all $fast-transition-time ease-in-out;
+            -webkit-transition: all $fast-transition-time ease-in-out;
+            -o-transition: all $fast-transition-time ease-in-out;
+            -moz-transition: all $fast-transition-time ease-in-out;
+        }
+    }
+    
+}
 
 @media(min-width:$medium-break-point) {
 
@@ -175,7 +276,7 @@ a{
         }
     }
 
-    
+    /*SINGLE POSTS*/
     .single-post, #page-content{
         .row{
             div > *{
@@ -187,6 +288,7 @@ a{
             
         }
     }
+
 }
 
 @media(min-width:$large-break-point) {

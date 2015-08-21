@@ -75,9 +75,6 @@
 }
 
 
-/*END HEADER*/
-
-
 /*BOTH SIDES*/
 
 .right-side,
@@ -96,6 +93,38 @@
     min-height: 1px;
 }
 
+/*TITLE AND MAIN ITEM CONTENT*/
+
+.intro-content,
+.intro-background {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    padding: 0 1em;
+    width: 100%;
+    padding: 10px;
+    hr {
+        width: 50%;
+    }
+    h1 > span {
+        font-weight: 300;
+        font-size: 1em;
+    }
+    h1 > span:first-child {
+        @include font-face(.9em, $type:"header")
+    }
+    h1 > span:nth-child(3) {
+        @include font-face(.7em, $type:"subheader")
+    }
+    #main-header {
+        opacity: $left-side-content-opacity;
+        color: $left-side-content-color;
+
+        hr{
+            color: $left-side-content-color;
+        }
+    }
+}
 
 /*LEFT SIDE OPTIONS*/
 
@@ -106,8 +135,45 @@
     background-color: $left-side-background-color;
     background-size: $main-background-size;
     .intro-content {
-        top: 41%;
+        top: 38%;
     }
+}
+
+.home-link-container{
+    ul{
+        list-style:none;
+        width:24em;
+        margin:0 auto;
+
+        li{
+            .home-link{
+                color:$left-side-content-color;
+                padding:10px;
+                margin:10px;
+                border:1px solid $left-side-content-color;
+                float:left;
+                width:100px;
+                padding:10px;
+                 /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+                -webkit-border-radius: $border-radius; 
+                /* Firefox 1-3.6 */
+                -moz-border-radius: $border-radius; 
+                /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+                border-radius: $border-radius; 
+
+                &:hover{
+                    color: #444;
+                    background:$left-side-content-color;
+                    transition: all $fast-transition-time ease-in-out;
+                    -webkit-transition: all $fast-transition-time ease-in-out;
+                    -o-transition: all $fast-transition-time ease-in-out;
+                    -moz-transition: all $fast-transition-time ease-in-out;
+                }
+            }
+        }
+    }
+    
+
 }
 
 
@@ -168,38 +234,7 @@
 }
 
 
-/*TITLE AND MAIN ITEM CONTENT*/
 
-.intro-content,
-.intro-background {
-    position: absolute;
-    top: 25%;
-    left: 0;
-    padding: 0 1em;
-    width: 100%;
-    padding: 10px;
-    hr {
-        width: 50%;
-    }
-    h1 > span {
-        font-weight: 300;
-        font-size: 1em;
-    }
-    h1 > span:first-child {
-        @include font-face(.9em, $type:"header")
-    }
-    h1 > span:nth-child(3) {
-        @include font-face(.7em, $type:"subheader")
-    }
-    #main-header {
-        opacity: $left-side-content-opacity;
-        color: $left-side-content-color;
-
-        hr{
-            color: $left-side-content-color;
-        }
-    }
-}
 
 
 
