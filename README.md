@@ -1,3 +1,5 @@
-### Magazine
+## Scaperoth.github.io
 
-This is a jekyll theme I shamelessly built off of [{Personal}](https://github.com/PanosSakkos/personal-jekyll-theme) created by [PanosSakkos](https://github.com/PanosSakkos)
+This is where I host my current working project.
+
+Current Project: [Magazine Theme for Jekyll](https://github.com/scaperoth/webdesign-magazine-jekyll)

@@ -2,13 +2,18 @@
  * base.scss
  * @author Mat Scaperoth: scaperoth.com
  * controls scss for all pages other than home page
+ * home page is controlled by split.scss
  * mobile first!
  */
 
 /*GLOBAL*/
+html{
+    overflow-x:hidden;
+}
 
 body {
     padding: 0;
+    margin:0;
     font-family:$body-font;
 }
 
@@ -35,6 +40,10 @@ a{
 
 .container-fluid{
     padding:0;
+    margin:0;
+}
+
+.row{
     margin:0;
 }
 
