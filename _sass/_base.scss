@@ -1,7 +1,8 @@
 /* 
- * split.css.scss
+ * base.scss
  * @author Mat Scaperoth: scaperoth.com
- * controls scss for all pages
+ * controls scss for all pages other than home page
+ * mobile first!
  */
 
 /*GLOBAL*/
@@ -32,6 +33,11 @@ a{
 }
 
 
+.container-fluid{
+    padding:0;
+    margin:0;
+}
+
 .col-center{
     width:50%;
     margin:0 auto;
@@ -45,16 +51,22 @@ a{
 }
 
 
+
 /*NAVIGATION*/
 .navbar-custom{ 
+
+    .navbar-toggle{
+        color:$white;
+    }
 
     &.top-nav-collapse{
         background:#000;
         opacity:.7;
+        color:#fff;
     }
     .navbar-brand{
         padding-top:30px;
-        color:$text-color;
+        color:$white;
         @include font-face('header');
 
         &:hover{
@@ -63,7 +75,7 @@ a{
     }
 
     .nav li a{
-        color:$text-color;
+        color:$white;
         border-bottom:1px solid transparent;
         transition: all $fast-transition-time ease-in-out;
         -webkit-transition: all $fast-transition-time ease-in-out;
@@ -110,12 +122,24 @@ a{
 
 }
 
+/*GENERIC CONTENT SECTIONT*/
 .content-section{
     text-align:left;
 
     #post-meta{
         text-align: center;
     }
+}
+
+#page-content{
+    padding-top:40px;
+}
+
+/*GENERIC SECTION TITLE*/
+.section-title{
+    text-align: center;
+    text-decoration: underline;
+    padding:20px;
 }
 
 
@@ -139,11 +163,7 @@ a{
 
 }
 
-.section-title{
-    text-align: center;
-    text-decoration: underline;
-    padding:20px;
-}
+
 
 /*SINGLE POSTS*/
 
@@ -152,22 +172,14 @@ a{
     width:100%;
     margin:0 auto;
     text-align: center;
+    max-height:900px;
+    overflow:hidden;
     img{
-        max-height:1200px;
     }
-}
-
-#page-content{
-    padding-top:40px;
 }
 
 #post-title{
     padding:20px;
-}
-
-.container-fluid{
-    padding:0;
-    margin:0;
 }
 
 .single-post .row, #page-content .row{
@@ -198,16 +210,6 @@ a{
             
 }
 
-#social{
-        padding:40px 0;
-    a{
-        color:#fff;
-    }
-}
-
-#discussion{
-    padding:0 20px;
-}
 
 
 /*BLOG PAGE*/
@@ -256,8 +258,48 @@ a{
     }
 }
 
+
+/*FOOTER*/
+#social{
+        padding:40px 0;
+    a{
+        color:#fff;
+    }
+}
+
+#discussion{
+    padding:0 20px;
+}
+
+/* for medium sized screens*/
 @media(min-width:$medium-break-point) {
 
+    /*SINGLE POSTS*/
+    #post-image{
+    }
+    .navbar-custom{
+        .navbar-brand{
+            color:$text-color;
+            padding-top:25px;
+        }
+        .nav li a{
+            color:$text-color;
+        }
+    }
+
+    .single-post, #page-content{
+        .row{
+            div > *{
+                width:75%;
+            }
+            div.full, div.full >*{
+                    padding:20px 0;
+            }
+            
+        }
+    }
+
+    /*BLOG PAGE*/
     #blog-posts{
         .post-container{
             .post-overlay{
@@ -292,34 +334,13 @@ a{
                 -moz-transition: all $fast-transition-time ease-in-out;
             }
         }
-    
+    }
 }
 
-    #post-image{
-    }
-    .navbar-custom{
-
-        .navbar-brand{
-            padding-top:25px;
-        }
-    }
-
-    /*SINGLE POSTS*/
-    .single-post, #page-content{
-        .row{
-            div > *{
-                width:75%;
-            }
-            div.full, div.full >*{
-                    padding:20px 0;
-            }
-            
-        }
-    }
-
-}
-
+/* for large sized screens*/
 @media(min-width:$large-break-point) {
+
+    /*SINGLE POST*/
     #post-image{
     }
     .single-post, #page-content{
@@ -331,7 +352,6 @@ a{
             div.full, div.full >*{
                     padding:10px 0;
             }
-            
         }
     }
 }
