@@ -1,6 +1,7 @@
 # Site settings
 
-url: "http://scaperoth.com"
+url: "http://scaperoth.github.io"
+baseurl: "/magazine/" # the subpath of your site, e.g. /blog/
 title: "SplitLayout"
 description: ""
 keywords: ""
