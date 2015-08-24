@@ -1,5 +1,3 @@
----
----
 /* YAML block in order to get processed by Jekyll */
 
 /*!
@@ -144,7 +142,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url( {{ site.background-img }} ) no-repeat bottom center scroll;
+    background: url(  ) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;

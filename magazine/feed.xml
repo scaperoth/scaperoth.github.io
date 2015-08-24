@@ -1,27 +1,101 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<channel>
-		<title>{{ site.title | xml_escape }}</title>
-		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-		{% for post in site.posts limit:10 %}
+		<title>SplitLayout</title>
+		<description></description>		
+		<link>http://scaperoth.com</link>
+		<atom:link href="http://scaperoth.com/feed.xml" rel="self" type="application/rss+xml" />
+		
 			<item>
-				<title>{{ post.title | xml_escape }}</title>
-				{% if post.author.name %}
-					<dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
-				{% endif %}        
-				{% if post.excerpt %}
-					<description>{{ post.excerpt | xml_escape }}</description>
-				{% else %}
-					<description>{{ post.content | xml_escape }}</description>
-				{% endif %}
-				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
-				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+				<title>More Recent Post</title>
+				        
+				
+					<description>&lt;H1&gt;EODEM MODO IS ENIM TIBI NEMO DABIT, QUOD, EXPETENDUM SIT, ID ESSE LAUDABILE.&lt;/H1&gt;
+
+</description>
+				
+				<pubDate>Thu, 13 Aug 2015 00:00:00 -0400</pubDate>
+				<link>http://scaperoth.com/blog/post7</link>
+				<guid isPermaLink="true">http://scaperoth.com/blog/post7</guid>
 			</item>
-		{% endfor %}
+		
+			<item>
+				<title>Recent Post</title>
+				        
+				
+					<description>&lt;H1&gt;UT PROVERBIA NON NULLA VERIORA SINT QUAM VESTRA DOGMATA.&lt;/H1&gt;
+
+</description>
+				
+				<pubDate>Wed, 12 Aug 2015 00:00:00 -0400</pubDate>
+				<link>http://scaperoth.com/blog/post6</link>
+				<guid isPermaLink="true">http://scaperoth.com/blog/post6</guid>
+			</item>
+		
+			<item>
+				<title>Post # 5</title>
+				        
+				
+					<description>&lt;H1&gt;EODEM MODO IS ENIM TIBI NEMO DABIT, QUOD, EXPETENDUM SIT, ID ESSE LAUDABILE.&lt;/H1&gt;
+
+</description>
+				
+				<pubDate>Tue, 11 Aug 2015 00:00:00 -0400</pubDate>
+				<link>http://scaperoth.com/blog/post5</link>
+				<guid isPermaLink="true">http://scaperoth.com/blog/post5</guid>
+			</item>
+		
+			<item>
+				<title>Post # 1</title>
+				        
+				
+					<description>&lt;H1&gt;EODEM MODO IS ENIM TIBI NEMO DABIT, QUOD, EXPETENDUM SIT, ID ESSE LAUDABILE.&lt;/H1&gt;
+
+</description>
+				
+				<pubDate>Sat, 11 Jul 2015 00:00:00 -0400</pubDate>
+				<link>http://scaperoth.com/blog/post1</link>
+				<guid isPermaLink="true">http://scaperoth.com/blog/post1</guid>
+			</item>
+		
+			<item>
+				<title>Post # 2</title>
+				        
+				
+					<description>&lt;H1&gt;UT PROVERBIA NON NULLA VERIORA SINT QUAM VESTRA DOGMATA.&lt;/H1&gt;
+
+</description>
+				
+				<pubDate>Sun, 05 Jul 2015 00:00:00 -0400</pubDate>
+				<link>http://scaperoth.com/blog/post2</link>
+				<guid isPermaLink="true">http://scaperoth.com/blog/post2</guid>
+			</item>
+		
+			<item>
+				<title>Post # 3</title>
+				        
+				
+					<description>&lt;h1&gt;Quamquam id quidem licebit iis existimare, qui legerint.&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Wed, 01 Jul 2015 00:00:00 -0400</pubDate>
+				<link>http://scaperoth.com/blog/post3</link>
+				<guid isPermaLink="true">http://scaperoth.com/blog/post3</guid>
+			</item>
+		
+			<item>
+				<title>NO IMAGE</title>
+				        
+				
+					<description>&lt;h1&gt;Non quaeritur autem quid naturae tuae consentaneum sit, sed quid disciplinae.&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Sat, 27 Jun 2015 00:00:00 -0400</pubDate>
+				<link>http://scaperoth.com/blog/post4</link>
+				<guid isPermaLink="true">http://scaperoth.com/blog/post4</guid>
+			</item>
+		
 	</channel>
 </rss>
