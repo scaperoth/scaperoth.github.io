@@ -1,0 +1,52 @@
+# Site settings
+
+url: "http://scaperoth.github.io"
+baseurl: "/magazine/" # the subpath of your site, e.g. /blog/
+title: "SplitLayout"
+description: ""
+keywords: ""
+favicon: ""
+black-favicon: ""
+google-tracking-id: ""
+disqus-shortname: "scaperoth"
+permalink: "blog/:title"
+sass_dir: ./_scss
+
+# Navigation bar links
+# Blog link in the blog and post pages will point to the blog.html#blog
+# In the default page it will point to the preview of the last post
+
+pages_list:
+  Home: 'home'
+  About: 'about'
+  Blog: 'blog'
+
+
+# Blog variables
+paginate: 6
+
+paginate_path: "blog/page:num"
+
+post-preview-words: 128
+
+fb-share: True
+twitter-share: True
+reddit-share: True
+
+# Social networks variables (many more available: facebook, flickr, dribbble, pinterest, instagram, tumblr etc.)
+social:
+  - title: "rss"
+    url: "/feed.xml"
+  - title: "github"
+    url: "https://github.com/scaperoth"
+  - title: "linkedin"
+    url: "http://no.linkedin.com/in/mscaperoth"
+  - title: "facebook"
+    url: "https://www.facebook.com/scaperoth"
+  - title: "twitter"
+    url: "https://twitter.com/mscaperoth"
+
+404-img: "/img/labtocat.png"
+
+# Exclusion list from the generated _site
+exclude: ["Rakefile", "LICENSE", "readme.markdown", "vendor"]
