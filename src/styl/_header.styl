@@ -31,9 +31,10 @@ $bg
 	bottom 0
 	width 100%
 	height auto
-	background-color darken(main, 100%)
-	opacity .6
+	background-color sec
+	opacity 1
 	z-index 0
+	border-bottom solid 10px lighten(main, 60%)
     
 
 .header-site, .header-post
@@ -46,7 +47,7 @@ $bg
 .header-site
 	@extends $bg
 	h1,h2
-		color: sec
+		color: main
 		text-align center
 	.site-title
 		font-size rem(60px)
@@ -74,9 +75,9 @@ $bg
 					font-size 1.5em
 					padding 10px
 					border-radius 7px
-					border 1px solid sec
+					border 1px solid main
 					text-decoration none
-					background-color transparent
+					background-color main
 					color sec
 					-webkit-transition all 500ms ease-out 
 				    -moz-transition all 500ms ease-out 
@@ -85,7 +86,8 @@ $bg
 				a:visited
 					color sec
 				a:hover
-					background-color fourth
+					border-color third
+					background-color transparent
 					color main
 					-webkit-transition all 500ms ease-out 
 				    -moz-transition all 500ms ease-out 
@@ -122,10 +124,10 @@ $bg
 		mainFont(300)
 		font-size rem(20px)
 	h1,.subtitle, .date
-		color sec
+		color main
 		text-align center
 	p
-		color sec
+		color main
 		text-decoration none
 		mainFont(300)
 		font-size rem(18px)
