@@ -24,21 +24,8 @@ $bg
   }
 }
 
-
-.bgoverlay
-	position absolute
-	top 0
-	bottom 0
-	width 100%
-	height auto
-	background-color sec
-	opacity 1
-	z-index 0
+header
 	border-bottom solid 10px lighten(main, 60%)
-    
-
-.header-site, .header-post
-	overflow hidden
 
 #navigation h2
 	color main
@@ -65,7 +52,7 @@ $bg
 			font-size rem(40px)
 	.main-links
 		ul
-			width 20em
+			width 18em
 			margin 4em auto
 			list-style none
 			li
@@ -131,3 +118,18 @@ $bg
 		text-decoration none
 		mainFont(300)
 		font-size rem(18px)
+
+@media (max-height: 500px)
+	header, .header-site, .header-post
+		position relative
+		height 550px
+		.content
+			position absolute
+			height 400px
+			top 55%
+	.header-post
+		height 350px
+		.content
+			position absolute
+			height 100px
+			top 55%
