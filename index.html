@@ -19,7 +19,7 @@ layout: default
                 <div class="content">
                     <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
                     <div class="description">
-                        {{ post.content | markdownify |  truncatewords:40 }}
+                        {{ post.content | markdownify |  truncatewords:60 }}
                         <!--<a href="{{ post.url | prepend: site.baseurl }}" class="link">Read more about {{post.title}}</a>-->
                     </div>
 
