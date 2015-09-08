@@ -2,7 +2,6 @@
 layout: post
 title: "Pointclouds and Heightmaps"
 date: 2014-10-06 10:11:04
-image: '/assets/img/'
 description:
 tags:
 - Software

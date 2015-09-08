@@ -2,7 +2,6 @@
 layout: post
 title: "Magazine Jekyll Theme"
 date: 2015-09-03 15:52:32
-image: '/assets/img/'
 description: 'A Jekyll theme with a magazine look and feel'
 tags: 
 - jekyll 

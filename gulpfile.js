@@ -20,7 +20,7 @@ var messages = {
  */
 gulp.task('jekyll-build', function (done) {
 	browserSync.notify(messages.jekyllBuild);
-	return cp.exec('jekyll', ['build'], {stdio: 'inherit'})
+	return cp.spawn('jekyll.bat', ['build'], {stdio: 'inherit'})
 		.on('close', done);
 });
 
@@ -93,4 +93,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['js', 'stylus', 'browser-sync',  'watch']);
+gulp.task('default', ['js', 'stylus', 'browser-sync', 'watch']);

@@ -2,7 +2,6 @@
 layout: post
 title: "Capturing Motion"
 date: 2014-09-17 11:09:26
-image: '/assets/img/'
 description:
 tags:
 - Kinect

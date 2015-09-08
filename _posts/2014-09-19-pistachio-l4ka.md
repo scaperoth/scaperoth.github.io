@@ -2,7 +2,6 @@
 layout: post
 title: "Pistachio L4ka"
 date: 2014-09-19 11:07:04
-image: '/assets/img/'
 description:
 tags:
 - Systems

@@ -1,5 +1,26 @@
-.post-content
+.header-post
+    position relative
 
+.titleoverlay
+    z-index 0
+    opacity .5
+    position absolute
+    top 0
+    right 0
+    height 100%
+    width 100%
+    background-color sec
+
+    &.secondary
+        background-color sec
+    &.main
+        background-color sec
+
+.header-content
+    position relative
+    z-index 1
+
+.post-content
     padding rem(40px) 0
     img
         max-width 100%

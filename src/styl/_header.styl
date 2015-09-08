@@ -7,7 +7,8 @@ body
 $bg
 	background mainimg
 	background-size cover
-	background-position left
+	background-position center
+	background-repeat no-repeat
 	height 100%
 	.content
 		width 95%
@@ -110,9 +111,13 @@ header
 	.subtitle
 		mainFont(300)
 		font-size rem(20px)
-	h1,.subtitle, .date
+	h1,.subtitle
 		color main
 		text-align center
+	.date
+		color third
+		mainFont(600)
+		font-size 2em
 	p
 		color main
 		text-decoration none
