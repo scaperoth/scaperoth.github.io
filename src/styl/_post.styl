@@ -1,3 +1,25 @@
+.header-post
+    position relative
+
+.titleoverlay
+    z-index 0
+    opacity .5
+    position absolute
+    top 0
+    right 0
+    height 100%
+    width 100%
+    background-color sec
+
+    &.secondary
+        background-color sec
+    &.main
+        background-color sec
+
+.header-content
+    position relative
+    z-index 1
+
 .post-content
     padding rem(40px) 0
     img
@@ -20,9 +42,9 @@
             color colorcode
     a
         mainFont(300)
-        color main
+        color link
         text-decoration none
-        border-bottom 2px solid #0562dc
+        /*border-bottom 2px solid #0562dc*/
     iframe
         margin-top rem(30px)
         width 100%
@@ -109,7 +131,7 @@ table
         padding 0 rem(20px)
     a
         display block
-        border-bottom 1px solid darken(lightGray,10%)
+        border-bottom 3px solid lighten(third, 60%)
         padding rem(10px) 0
         text-decoration none
         transition all .5s

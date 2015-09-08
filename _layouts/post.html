@@ -4,9 +4,12 @@
     <body>
         {% include svg-icons.html %}
         {% include header-post.html %}
-        <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <section class="post primary" itemscope itemtype="http://schema.org/BlogPosting">
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
+                {% if post.image %}
+                    <img src="{{ page.image }}" alt="{{ page.image-description }}">
+                {% endif %}
                 {{ content }}
             </article>
 

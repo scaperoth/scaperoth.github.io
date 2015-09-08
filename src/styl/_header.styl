@@ -1,23 +1,41 @@
 html,
 body
 	height 100%
-	background-color bodybgcolor
+	background-color white
 
 
 $bg
 	background mainimg
+	background-size cover
+	background-position center
+	background-repeat no-repeat
 	height 100%
 	.content
 		width 95%
 		align(both)
 		text-align center
 
+
+@keyframes backgroundout {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #000;
+  }
+}
+
+header
+	border-bottom solid 10px lighten(main, 60%)
+
+#navigation h2
+	color main
+
 // Header home
 .header-site
 	@extends $bg
-	background-size cover
 	h1,h2
-		color: sec
+		color: main
 		text-align center
 	.site-title
 		font-size rem(60px)
@@ -33,6 +51,37 @@ $bg
 		margin rem(30px) 0
 		+above(cut)
 			font-size rem(40px)
+	.main-links
+		ul
+			width 18em
+			margin 4em auto
+			list-style none
+			li
+				float left
+				margin  0 10px
+				a
+					font-size 1.5em
+					padding 10px
+					border-radius 7px
+					border 1px solid main
+					text-decoration none
+					background-color main
+					color sec
+					-webkit-transition all 500ms ease-out 
+				    -moz-transition all 500ms ease-out 
+				    -o-transition all 500ms ease-out 
+				    transition all 500ms ease-out 
+				a:visited
+					color sec
+				a:hover
+					border-color third
+					background-color transparent
+					color main
+					-webkit-transition all 500ms ease-out 
+				    -moz-transition all 500ms ease-out 
+				    -o-transition all 500ms ease-out 
+				    transition all 500ms ease-out 
+
 
 // Header Post
 .header-post
@@ -44,7 +93,7 @@ $bg
 		display table
 		padding 20px
 		a
-			border 2px solid sec
+			border 2px solid main
 			border-radius 20px
 			padding 0 10px
 			+above(cut)
@@ -62,11 +111,30 @@ $bg
 	.subtitle
 		mainFont(300)
 		font-size rem(20px)
-	h1,.subtitle, .date
-		color sec
+	h1,.subtitle
+		color main
 		text-align center
+	.date
+		color third
+		mainFont(600)
+		font-size 2em
 	p
-		color sec
+		color main
 		text-decoration none
 		mainFont(300)
 		font-size rem(18px)
+
+@media (max-height: 500px)
+	header, .header-site, .header-post
+		position relative
+		height 650px
+		.content
+			position absolute
+			height 500px
+			top 55%
+	.header-post
+		height 250px
+		.content
+			position absolute
+			height 100px
+			top 55%

@@ -1,7 +1,7 @@
 .post-item
     text-align left
     padding rem(40px) 0
-    border-bottom 3px solid lightGray
+    border-bottom 3px solid lighten(third, 60%)
     center(rem(1000px))
     +below(rem(1000px))
         padding-left rem(20px)
@@ -23,7 +23,7 @@
             color black
             font-size rem(18px)
     .content
-        col(5/6)
+        col(4/6)
         +below(cut)
             stack()
         a
@@ -36,10 +36,27 @@
             +below(cut)
                 text-align center
         .description
-            *
-                color texts
-                mainFont(300)
-                font-size rem(20px)
+            .image-preview-container
+                width 100%
+                background-size cover
+                height:400px;
+                &.top
+                    background-position top
+                &.bottom
+                    background-position bottom
+                &.left
+                    background-position left
+                &.right
+                    background-position right
+                &.center
+                    background-position center
+            blockquote
+                padding-left 0
+                margin-left 0
+                opacity .8
+            color texts
+            mainFont(300)
+            font-size rem(20px)
             a
-                color main
-                text-decoration underline
+                color link
+                /*text-decoration underline*/

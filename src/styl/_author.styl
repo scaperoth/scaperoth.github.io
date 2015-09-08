@@ -1,5 +1,7 @@
 .author
-    background lightGray
+    background main
+    border-top 2px solid fourth
+    border-bottom 2px solid fourth
     display table
     width 100%
     padding rem(40px) 0
@@ -20,9 +22,9 @@
             float left
             margin-right 3.125rem
     .def
-        color gray
+        color sec
         font-size 1.125rem
-        mainFont(300)
+        mainFont(600)
         margin rem(10px)
         +above(cut)
             margin 0
@@ -32,10 +34,10 @@
         a
             mainFont()
             text-decoration none
-            color black
+            color fourth
             font-size rem(30px)
             &:hover
-                color main
+                color third
             +above(cut)
                 font-size rem(45px)
     .desc
@@ -46,5 +48,5 @@
             font-size rem(20px)
     .email
         text-decoration none
-        color main
+        color sec
 
