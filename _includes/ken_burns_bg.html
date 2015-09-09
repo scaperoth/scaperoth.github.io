@@ -1,0 +1,8 @@
+<div id="slideshow">
+	{% for post in site.posts %}
+        {% if post.image %}
+        <img src="{{ post.image }}" {% if post.image-description %} alt="{{ post.image-description }}" {% endif %} >
+        {% endif %}
+    {% endfor %}
+</div>
+
