@@ -8,13 +8,13 @@
  */
 (function() {
     // we set the 'fx' class on the first image when the page loads
-    document.getElementById('slideshow').getElementsByTagName('img')[0].className = "fx";
+    document.getElementById('slideshow').getElementsByTagName('div')[0].className = " fx";
     // this calls the kenBurns function every 4 seconds
     // you can increase or decrease this value to get different effects
     window.setInterval(kenBurns, 6000);
     // the third variable is to keep track of where we are in the loop
     // if it is set to 1 (instead of 0) it is because the first image is styled when the page loads
-    var images = document.getElementById('slideshow').getElementsByTagName('img'),
+    var images = document.getElementById('slideshow').getElementsByTagName('div'),
         numberOfImages = images.length,
         i = 0;
 

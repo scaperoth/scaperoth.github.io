@@ -23,10 +23,14 @@
  * Finally, we set the transition (property and duration). Note that duration values are different for opacity and transform as we want the "fade-in" effect to be faster than the "panning" effect.
  */
 
-#slideshow img {
+height = 100%
+
+#slideshow div {
     position:absolute;
-    width:100%;
-    height:auto;
+    width:120%;
+    height:120%;  
+    background-repeat: no-repeat;
+    background-size: cover;
     top:0;
     left:0;
     opacity:0;
@@ -47,7 +51,7 @@
  * This technique allows us to create various paths while applying the same translate() values to all images (see the 'fx' class further below).
  */
 
-#slideshow img  {
+#slideshow div  {
     -webkit-transform-origin: bottom left;
        -moz-transform-origin: bottom left;
         -ms-transform-origin: bottom left;
@@ -84,7 +88,7 @@
  * This is because the second image needs to show on top of the first one when it transitions in.
  */
 
-#slideshow .fx:first-child + img ~ img  {
+#slideshow .fx:first-child + div ~ div  {
     z-index:-1;
 }
 

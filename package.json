@@ -1,7 +1,8 @@
 {
-  "name": "willjekylltemplate",
+  "name": "scaperothportfolio",
   "version": "1.0.0",
-  "description": "My jekyll blog template.",
+  "description": "My jekyll portfolio.",
+  "repository": "https://github.com/scaperoth/scaperoth.github.io",
   "main": "gulpfile.js",
   "scripts": {
     "test": "test"
@@ -15,7 +16,7 @@
     "jekyll",
     "js"
   ],
-  "author": "Willian Justen de Vasconcellos",
+  "author": "Matthew Scaperoth",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer-stylus": "^0.4.0",

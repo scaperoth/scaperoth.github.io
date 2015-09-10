@@ -1,7 +1,7 @@
 <div id="slideshow">
 	{% for post in site.posts %}
         {% if post.image %}
-        <img src="{{ post.image }}" {% if post.image-description %} alt="{{ post.image-description }}" {% endif %} >
+        <div style="background-image: url('{{post.image}}'); {% if post.image-position %} background-position: {{ post.image-position }}; {% endif %}; "></div>
         {% endif %}
     {% endfor %}
 </div>
