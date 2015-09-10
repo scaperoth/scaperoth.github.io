@@ -3,7 +3,6 @@ layout: default
 ---
 {% include sections/welcome.html %}
 <main id="scroll" class="home" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-    
     {% for post in site.posts %}
         <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
                 <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
