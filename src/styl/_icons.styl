@@ -12,14 +12,15 @@ size(width = 30, height = 30)
         border rem(2px) solid third
         line-height 0
         transition all .7s
+        background third
         .icon
-            fill third
+            fill fourth
             size(18,18)
             +above(cut)
                 size()
         &:hover
             border-color third
-            background third
+            background transparent
             .icon
                 fill fourth
 
