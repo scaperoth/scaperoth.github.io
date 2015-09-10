@@ -2,7 +2,7 @@
 layout: post
 title: "Magazine Jekyll Theme"
 date: 2015-09-03 15:52:32
-image: '/assets/img/project_screenshots/Magazine.screenshot.png'
+image: '/assets/img/project_screenshots/magazine.screenshot.png'
 image-description: "screenshot of magazine jekyll theme"
 image-position: center
 description: 'A Jekyll theme with a magazine look and feel'
