@@ -86,6 +86,7 @@ header
 
 // Header Post
 .header-post
+	min-height 400px
 	max-height 500px
 	@extends $bg
 	background-color main
@@ -130,17 +131,16 @@ header
 
 
 
-@media (max-height: 500px)
+@media (min-width: 500px)
 	header, .header-site, .header-post
 		position relative
-		height 650px
+		height 750px
 		.content
 			position absolute
-			height 500px
+			height 400px
 			top 55%
 	.header-post
-		height 250px
 		.content
 			position absolute
 			height 100px
-			top 55%
+			top 35%
