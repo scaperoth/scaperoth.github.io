@@ -1,3 +1,8 @@
+sectionheight = 270px
+
+.home
+    padding-top sectionheight
+
 .post-item, .content-section
     text-align left
     padding rem(40px) 0
@@ -66,9 +71,25 @@
 section.welcome
     max-width 100%
     text-align center
-    border-bottom dashed 20px white
-    padding 10px 0 40px 0
+    position absolute
+    width 100%
+    height sectionheight
     background main
+    border-bottom dashed 20px main
+    border-top dashed 20px main
+    margin-top -20px
+    padding 0
+    -moz-background-clip: border;     /* Firefox 3.6 */
+    -webkit-background-clip: border;  /* Safari 4? Chrome 6? */
+    background-clip: border-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+            
+    -moz-background-clip: padding;     /* Firefox 3.6 */
+    -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+    background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+            
+    -moz-background-clip: content;     /* Firefox 3.6 */
+    -webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+    background-clip: content-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
     color fourth
     h1
         mainFont(600)
