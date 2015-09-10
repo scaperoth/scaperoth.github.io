@@ -7,9 +7,14 @@ var gulp        = require('gulp'),
 	jeet        = require('jeet'),
 	rupture     = require('rupture'),
 	koutoSwiss  = require('kouto-swiss'),
+	browserify 	= require('browserify');
 	prefixer    = require('autoprefixer-stylus'),
 	imagemin    = require('gulp-imagemin'),
 	cp          = require('child_process');
+
+var vendor_js_paths = [
+	'node_modules/jquery-shinybox/source/jquery.shinybox.js'
+	];
 
 var messages = {
 	jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -42,6 +47,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 	});
 });
 
+/*================================================
 /**
  * Stylus task
  */
@@ -49,6 +55,7 @@ gulp.task('stylus', function(){
 		gulp.src('src/styl/main.styl')
 		.pipe(plumber())
 		.pipe(stylus({
+			'include css': true,
 			use:[koutoSwiss(), prefixer(), jeet(),rupture()],
 			compress: true
 		}))
@@ -57,17 +64,34 @@ gulp.task('stylus', function(){
 		.pipe(gulp.dest('assets/css'))
 });
 
-/**
- * Javascript Task
+
+/*================================================
+
+/*
+* * Javascript Task
  */
-gulp.task('js', function(){
+gulp.task('js',function(){
 	return gulp.src('src/js/**/*.js')
 		.pipe(plumber())
 		.pipe(concat('main.js'))
 		.pipe(uglify())
+		.pipe(browserSync.reload({stream:true}))
 		.pipe(gulp.dest('assets/js/'))
 });
 
+/*
+* * ColorBox Javascript Task
+ */
+gulp.task('vendor-js', function(){
+	return gulp.src(vendor_js_paths)
+		.pipe(plumber())
+		.pipe(concat('vendor.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('assets/js/'))
+});
+
+
+/*================================================
 /**
  * Imagemin Task
  */
@@ -77,6 +101,10 @@ gulp.task('imagemin', function() {
 		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
 		.pipe(gulp.dest('assets/img/'));
 });
+
+/*================================================
+
+
 
 /**
  * Watch stylus files for changes & recompile
@@ -93,4 +121,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['js', 'stylus', 'browser-sync', 'watch']);
+gulp.task('default', ['vendor-js','js', 'stylus', 'browser-sync', 'watch']);

@@ -19,7 +19,6 @@
   "author": "Matthew Scaperoth",
   "license": "ISC",
   "devDependencies": {
-    "jquery-colorbox": "^1.6.3",
     "autoprefixer-stylus": "^0.4.0",
     "browser-sync": "^1.9.0",
     "grunt": "^0.4.5",
@@ -32,5 +31,9 @@
     "jeet": "^6.1.2",
     "kouto-swiss": "^0.11.6",
     "rupture": "^0.6.1"
+  },
+  "dependencies": {
+    "browserify": "~11.0.1",
+    "jquery-shinybox": "~2.2.0"
   }
 }
