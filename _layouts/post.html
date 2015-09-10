@@ -8,7 +8,9 @@
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
                 {% if page.image %}
+                    <a class="gallery" href="#">
                     <img src="{{ page.image }}" alt="{{ page.image-description }}">
+                    </a>
                 {% endif %}
                 {{ content }}
             </article>

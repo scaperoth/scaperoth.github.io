@@ -19,6 +19,7 @@
   "author": "Matthew Scaperoth",
   "license": "ISC",
   "devDependencies": {
+    "jquery-colorbox": "^1.6.3",
     "autoprefixer-stylus": "^0.4.0",
     "browser-sync": "^1.9.0",
     "grunt": "^0.4.5",
