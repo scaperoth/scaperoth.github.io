@@ -2,6 +2,9 @@
 layout: post
 title: "Getting Started with the Quadruped"
 date: 2014-09-15 11:37:01
+image: '/assets/img/project_screenshots/quad.screenshot.png'
+image-description: "Snapshot of the the development frame of the R. Links quadruped"
+image-position: center
 description:
 tags:
 - Quadruped

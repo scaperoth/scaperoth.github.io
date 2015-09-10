@@ -2,6 +2,9 @@
 layout: post
 title: "Pistachio L4ka"
 date: 2014-09-19 11:07:04
+image: '/assets/img/project_screenshots/mukernel.screenshot.png'
+image-description: "Image showing structure of a micro kernel"
+image-position: center
 description:
 tags:
 - Systems

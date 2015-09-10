@@ -2,6 +2,9 @@
 layout: post
 title: "Capturing Motion"
 date: 2014-09-17 11:09:26
+image: '/assets/img/project_screenshots/kinect.screenshot.png'
+image-description: "Photo of an xbox kinect"
+image-position: center
 description:
 tags:
 - Kinect

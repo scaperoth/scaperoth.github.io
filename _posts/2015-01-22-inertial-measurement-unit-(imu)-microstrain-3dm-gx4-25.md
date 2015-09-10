@@ -2,6 +2,9 @@
 layout: post
 title: "Inertial Measurement Unit (IMU) MicroStrain 3DM GX4-25"
 date: 2015-01-22 09:48:28
+image: '/assets/img/project_screenshots/imu.screenshot.png'
+image-description: "Photo of the inertial measurement unit used"
+image-position: center
 description:
 tags: 
 - IMU
