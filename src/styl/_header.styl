@@ -18,15 +18,14 @@ $bg
 
 @keyframes backgroundout {
   from {
-    color: #fff;
+    color  #fff 
   }
   to {
-    color: #000;
+    color  #000 
   }
 }
+	
 
-header
-	border-bottom dashed 20px lighten(white, 60%)
 
 #navigation h2
 	color main
@@ -35,9 +34,9 @@ header
 .header-site
 	overflow-y hidden
 	@extends $bg
-	background-color lighten(third, 65%)
+	background-color main
 	h1,h2
-		color: main
+		color  main
 		text-align center
 	.site-title
 		font-size rem(60px)
@@ -73,9 +72,9 @@ header
 				    -moz-transition all 500ms ease-out 
 				    -o-transition all 500ms ease-out 
 				    transition all 500ms ease-out 
-				a:visited
+				a visited
 					color sec
-				a:hover
+				a hover
 					border-color third
 					background-color transparent
 					color main
@@ -87,6 +86,7 @@ header
 
 // Header Post
 .header-post
+	border-bottom  20px dashed white
 	min-height 400px
 	max-height 500px
 	@extends $bg
@@ -132,7 +132,7 @@ header
 
 
 
-@media (min-width: 500px)
+@media (min-width  500px)
 	header, .header-site, .header-post
 		position relative
 		height 850px
