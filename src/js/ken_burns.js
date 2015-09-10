@@ -14,7 +14,9 @@
     var images = document.getElementById('slideshow').getElementsByTagName('div'),
         numberOfImages = images.length,
         i = 0;
-    
+
+    kenBurns;
+
     // this calls the kenBurns function every 4 seconds
     // you can increase or decrease this value to get different effects
     window.setInterval(kenBurns, 6000);

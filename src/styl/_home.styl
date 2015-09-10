@@ -1,4 +1,4 @@
-.post-item
+.post-item, .content-section
     text-align left
     padding rem(40px) 0
     border-bottom 3px solid lighten(third, 60%)
@@ -22,6 +22,7 @@
         .month-year
             color black
             font-size rem(18px)
+
     .content
         col(4/6)
         +below(cut)
@@ -61,3 +62,21 @@
             a
                 color link
                 /*text-decoration underline*/
+
+section.welcome
+    max-width 100%
+    text-align center
+    border-bottom 1px dotted main
+    border-top 1px dotted main
+    padding 70px 0 100px 0
+    background white
+    color main
+    h1
+        mainFont(600)
+        font-size 4em
+    h3
+        font-size 1.5em
+    .description
+        color lighten(main, 40%)
+    .content.full
+        col(6/6)

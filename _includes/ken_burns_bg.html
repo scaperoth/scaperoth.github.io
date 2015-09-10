@@ -1,4 +1,6 @@
 <div id="slideshow">
+	<div id="sticky-image" style="background-image: url('../assets/img/r2d2.jpg');  background-position: top; "></div>
+
 	{% for post in site.posts %}
         {% if post.image %}
         <div style="background-image: url('{{post.image}}'); {% if post.image-position %} background-position: {{ post.image-position }}; {% endif %}; "></div>
