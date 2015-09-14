@@ -20,7 +20,7 @@ layout: default
                     <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
                     <div class="description"> 
                         {% if post.image %}
-                        <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">
+                        <a href="{{ post.url | prepend: site.baseurl }}">
                             <div class="image-preview-container {% if post.image-position %} {{ post.image-position }} {% endif %}" style="background-image: url('{{ post.image }}');">
                             </div>
                         </a>
