@@ -7,8 +7,8 @@ image-description: "screenshot of magazine jekyll theme"
 image-position: center
 description: 'A Jekyll theme with a magazine look and feel'
 tags: 
-- jekyll 
-- theme 
+- Jekyll 
+- Theme 
 categories: 
 - Jekyll Themes
 twitter_text: Magazine layout for Jekyll

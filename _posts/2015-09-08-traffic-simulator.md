@@ -7,7 +7,11 @@ image-description: "Screenshot of the simulator"
 image-position: top
 description:
 tags:
+- Simulation
+- Java
+- OOP
 categories:
+- Simulation
 twitter_text:
 ---
 > The code for this project can be <a href="https://github.com/scaperoth/carmachinelearning">found on GitHub</a>

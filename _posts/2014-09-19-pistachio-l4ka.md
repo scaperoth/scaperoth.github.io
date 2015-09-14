@@ -11,7 +11,7 @@ tags:
 - Micro Kernels
 - Pistachio
 categories:
-- Projects
+- Operating Systems
 twitter_text:
 ---
 

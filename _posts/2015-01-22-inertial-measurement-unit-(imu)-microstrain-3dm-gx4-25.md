@@ -10,9 +10,9 @@ tags:
 - IMU
 - Systems
 - Hardware
-- c++
+- C++
 categories: 
-- Projects
+- Robotics
 twitter_text: 
 ---
 
