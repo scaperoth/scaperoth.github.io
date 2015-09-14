@@ -15,7 +15,7 @@ categories:
 twitter_text:
 ---
 
-> The code for this front-end can be <a href="https://github.com/scaperoth/DogCaller">found on GitHub here</a> and the backend for the raspberry pi, here can be <a href="https://github.com/scaperoth/ruby-noise-detection">found here</a>
+> The code for the front-end can be <a href="https://github.com/scaperoth/DogCaller">found on GitHub here</a> and the back-end for the raspberry pi, here can be <a href="https://github.com/scaperoth/ruby-noise-detection">found here</a>
 
 Using the [ruby noise detection library](https://github.com/scaperoth/ruby-noise-detection), that was edited from [@mmornati's](https://github.com/mmornati) original code, my goal was to be able to capture noise from a barking dog and turn that noise into readable data.
 
