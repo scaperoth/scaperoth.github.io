@@ -8,6 +8,8 @@ tags:
 - Raspberry Pi
 - Python
 - Ruby
+- Ruby on Rails
+- Bootstrap
 - Visualization
 - Data Collection
 categories:
@@ -15,19 +17,19 @@ categories:
 twitter_text:
 ---
 
-> The code for the front-end can be <a href="https://github.com/scaperoth/DogCaller">found on GitHub here</a> and the back-end for the raspberry pi, here can be <a href="https://github.com/scaperoth/ruby-noise-detection">found here</a>
+> The code for the front-end can be <a href="https://github.com/scaperoth/DogCaller" target="_blank">found on GitHub here</a> and the back-end for the raspberry pi, here can be <a href="https://github.com/scaperoth/ruby-noise-detection" target="_blank">found here</a>
 
-Using the [ruby noise detection library](https://github.com/scaperoth/ruby-noise-detection), that was edited from [@mmornati's](https://github.com/mmornati) original code, my goal was to be able to capture noise from a barking dog and turn that noise into readable data.
+Using the [ruby noise detection library](https://github.com/scaperoth/ruby-noise-detection){:target="_blank"}, that was edited from [@mmornati's](https://github.com/mmornati){:target="_blank"} original code, my goal was to be able to capture noise from a barking dog and turn that noise into readable data.
 
 The reason why it is called **The Dog \"Caller\"** is because the goal of this [gadget](categories#gadgets) is to help train our pups into being better while we are away. Using the Dog Caller we are able to track the behavior and, in turn, find out the triggers that cause the unwanted behavior. This device could even be hooked up to an intevention mechanism like a dog whistle or noise maker so that training doesn't have to stop when you are away.
 
 ## Components
-* [Raspberry Pi](http://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=raspberry+pi)
-* [Kinobo - USB 2.0 Mini Microphone](http://www.amazon.com/gp/product/B00IR8R7WQ?psc=1&redirect=true&ref_=oh_aui_detailpage_o00_s00)
-* [Ruby](https://www.ruby-lang.org/en/)
-* [Python](https://www.python.org/)
+* [Raspberry Pi](http://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=raspberry+pi){:target="_blank"}
+* [Kinobo - USB 2.0 Mini Microphone](http://www.amazon.com/gp/product/B00IR8R7WQ?psc=1&redirect=true&ref_=oh_aui_detailpage_o00_s00){:target="_blank"}
+* [Ruby](https://www.ruby-lang.org/en/){:target="_blank"}
+* [Python](https://www.python.org/){:target="_blank"}
 
-Using a [Raspberry Pi](https://www.raspberrypi.org/), I read the signal from an attached microphone and, if the bark is loud enough (above some arbitrary threshold), send the value, which is essentially the noise level, of the bark to a [Keen.io](https://keen.io/) account. The created Ruby application then displays real-time data into an easy-to-use graphic that shows how many times the dog had broken the particular threshold. 
+Using a [Raspberry Pi](https://www.raspberrypi.org/){:target="_blank"}, I read the signal from an attached microphone and, if the bark is loud enough (above some arbitrary threshold), send the value, which is essentially the noise level, of the bark to a [Keen.io](https://keen.io/){:target="_blank"} account. The created Ruby application then displays real-time data into an easy-to-use graphic that shows how many times the dog had broken the particular threshold. 
 
 Getting Started
 ------------
@@ -85,7 +87,7 @@ on [keen.io](https://keen.io?s=gh-gem).
 The recommended way to set keys is via the environment. The keys you can set are 
 `KEEN_PROJECT_ID`, `KEEN_WRITE_KEY`, `KEEN_READ_KEY` and `KEEN_MASTER_KEY`.
 You only need to specify the keys that correspond to the API calls you'll be performing. 
-If you're using [foreman](http://ddollar.github.com/foreman/), add this to your `.env` file:
+If you're using [foreman](http://ddollar.github.com/foreman/){:target="_blank"}, add this to your `.env` file:
 
     KEEN_PROJECT_ID=aaaaaaaaaaaaaaa
     KEEN_MASTER_KEY=xxxxxxxxxxxxxxx
@@ -95,7 +97,7 @@ If you're using [foreman](http://ddollar.github.com/foreman/), add this to your 
 If not, make a script to export the variables into your shell or put it before the command you use to start your server.
 
 When you deploy, make sure your production environment variables are set. For example,
-set [config vars](https://devcenter.heroku.com/articles/config-vars) on Heroku. (We recommend this
+set [config vars](https://devcenter.heroku.com/articles/config-vars){:target="_blank"} on Heroku. (We recommend this
 environment-based approach because it keeps sensitive information out of the codebase. If you can't do this, see the alternatives below.)
 
 Once your environment is properly configured, the `Keen` object is ready to go immediately.
