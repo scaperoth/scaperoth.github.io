@@ -11,7 +11,7 @@
     {% if page == paginator.page %}
       <em class="page_num active" >{{ page }}</em>
     {% elsif page == 1 %}
-      <a class="page_num" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}#scroll">{{ page }}</a>
+      <a class="page_num" href="/#scroll">{{ page }}</a> 
     {% else %}
       <a class="page_num" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}#scroll">{{ page }}</a>
     {% endif %}
