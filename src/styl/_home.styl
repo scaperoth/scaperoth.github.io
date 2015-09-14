@@ -102,3 +102,77 @@ section.welcome
         color sec
     .content.full
         col(6/6)
+
+
+.pagination
+    width 100%
+    text-align center
+    margin 20px 0
+
+    a:visited
+        color main
+    .page_num, a.page_num
+        display inline-block
+        padding rem(15px)
+        margin rem(2px)
+        border-radius 60%
+        border rem(2px) solid third
+        line-height 10px
+        transition all .7s
+        background third
+        color fourth
+    a.page_num:hover
+            border-color third
+            background transparent
+            color third
+    em.active
+        background transparent
+        color third
+
+    .pagination-text, a.pagination-text
+        color main
+        font-size 2em
+        margin 0 20px
+        line-height 10px
+        text-decoration none
+        &:hover
+            color third
+        &.inactive
+            color transparent
+
+
+@media (min-width  1200px)
+
+    .masonry-section
+        .masonry-posts
+            padding 0 50px
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            column-count: 2;
+
+            .post-item
+                display: inline-block;
+                background: #fff;
+                padding: 1em;
+                margin: 0 0 1.5em;
+                width: 100%;
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-shadow: 1px 1px 1px 0 #ccc;
+                
+                .content
+                    width 100%
+                    float none
+                    clear both
+
+                .datetime
+                    text-align center
+                    width 100%
+                    float none
+                    margin 0
+
+                .post-title
+
+                .description
+                    width 100%
