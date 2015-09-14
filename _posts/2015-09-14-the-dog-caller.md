@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Dog Caller"
+title: "The Dog \"Caller\""
 date: 2015-09-14 15:10:13
 image: '/assets/img/project_screenshots/dogcaller.screenshot.png'
 description:
@@ -19,11 +19,13 @@ twitter_text:
 
 Using the [ruby noise detection library](https://github.com/scaperoth/ruby-noise-detection), that was edited from [@mmornati's](https://github.com/mmornati) original code, my goal was to be able to capture noise from a barking dog and turn that noise into readable data.
 
+The reason why it is called **The Dog \"Caller\"** is because the goal of this [gadget](categories#gadgets) is to help train our pups into being better while we are away. Using the Dog Caller we are able to track the behavior and, in turn, find out the triggers that cause the unwanted behavior. This device could even be hooked up to an intevention mechanism like a dog whistle or noise maker so that training doesn't have to stop when you are away.
+
 ## Components
-	- [Raspberry Pi](http://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=raspberry+pi)
-	- [Kinobo - USB 2.0 Mini Microphone](http://www.amazon.com/gp/product/B00IR8R7WQ?psc=1&redirect=true&ref_=oh_aui_detailpage_o00_s00)
-	- [Ruby](https://www.ruby-lang.org/en/)
-	- [Python](https://www.python.org/)
+* [Raspberry Pi](http://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=raspberry+pi)
+* [Kinobo - USB 2.0 Mini Microphone](http://www.amazon.com/gp/product/B00IR8R7WQ?psc=1&redirect=true&ref_=oh_aui_detailpage_o00_s00)
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Python](https://www.python.org/)
 
 Using a [Raspberry Pi](https://www.raspberrypi.org/), I read the signal from an attached microphone and, if the bark is loud enough (above some arbitrary threshold), send the value, which is essentially the noise level, of the bark to a [Keen.io](https://keen.io/) account. The created Ruby application then displays real-time data into an easy-to-use graphic that shows how many times the dog had broken the particular threshold. 
 
@@ -33,11 +35,14 @@ Getting Started
 #### Keen IO Setup   
 Add to your Gemfile:
 
-    gem 'keen'
+{% highlight bash %}
+gem 'keen'
+{% endhighlight %}
 
 or install from Rubygems:
-
+{% highlight bash %}
     gem install keen
+{% endhighlight %}
 
 keen is tested with Ruby 1.8 and 1.9 on:
 
@@ -51,22 +56,18 @@ output: **sox** and **arecord**.
 So you need to install these packages on your raspberrypi (or other linux
 system):
 
-```bash
+{% highlight bash %}
 sudo apt-get install sox alsa-utils libssl-dev
-```
-```
 gem install em-http-request
-```
+{% endhighlight %}
 
 Then, in the current version, the script does not accept parameters to change
 file location (log, tmp recording and pid file), so you need to allow the script
 execution user (**pi** for example) the write access to these files and folders:
 
-```
-RECORD_FILENAME='/tmp/noise.wav'
-LOG_FILE='/var/log/noise_detector.log'
-PID_FILE='/etc/noised/noised.pid'
-```
+	RECORD_FILENAME='/tmp/noise.wav'
+	LOG_FILE='/var/log/noise_detector.log'
+	PID_FILE='/etc/noised/noised.pid'
 
 or you can edit the script changin these variables values with what you prefer
 for your system.
@@ -101,19 +102,18 @@ Once your environment is properly configured, the `Keen` object is ready to go i
 
 Detect Audio Card
 -----------------
-
-```bash
+{% highlight bash %}
 pi@raspberrypi ~ $ noise_detection.rb -d
 Detecting your soundcard...
- 0 [ALSA           ]: BRCM bcm2835 ALSbcm2835 ALSA - bcm2835 ALSA
-                      bcm2835 ALSA
- 1 [U0x46d0x8d7    ]: USB-Audio - USB Device 0x46d:0x8d7
-                      USB Device 0x46d:0x8d7 at usb-bcm2708_usb-1.2, full speed
-```
+0 [ALSA           ]: BRCM bcm2835 ALSbcm2835 ALSA - bcm2835 ALSA
+                     bcm2835 ALSA
+1 [U0x46d0x8d7    ]: USB-Audio - USB Device 0x46d:0x8d7
+                     USB Device 0x46d:0x8d7 at usb-bcm2708_usb-1.2, full speed
+{% endhighlight %}
 
 Test Audio Card Record
 ----------------------
-```bash
+{% highlight bash %}
 pi@raspberrypi ~ $ noise_detection.rb -t 1
 Testing soundcard...
 Samples read:             40000
@@ -131,17 +131,18 @@ Mean    delta:         0.003664
 RMS     delta:         0.004679
 Rough   frequency:          406
 Volume adjustment:       24.059
-```
+{% endhighlight %}
 
 Starting Noise Detection with Alert
 -----------------------------------
-```bash
+{% highlight bash %}
 noise_detection.rb -m 1 -n 0.30 -e me@server.com -v
-```
+{% endhighlight %}
+
 The script will be started in background
 
 Terminating Noise Detection
 ---------------------------
-```bash
+{% highlight bash %}
 noise_detection.rb -k
-```
+{% endhighlight %}
