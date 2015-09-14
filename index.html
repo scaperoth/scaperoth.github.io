@@ -20,8 +20,10 @@ layout: default
                     <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
                     <div class="description"> 
                         {% if post.image %}
-                        <div class="image-preview-container {% if post.image-position %} {{ post.image-position }} {% endif %}" style="background-image: url('{{ post.image }}');">
-                        </div>
+                        <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">
+                            <div class="image-preview-container {% if post.image-position %} {{ post.image-position }} {% endif %}" style="background-image: url('{{ post.image }}');">
+                            </div>
+                        </a>
                         {% endif %}
                         {{ post.content | markdownify |  truncatewords:60 }}
                         <!--<a href="{{ post.url | prepend: site.baseurl }}" class="link">Read more about {{post.title}}</a>-->
