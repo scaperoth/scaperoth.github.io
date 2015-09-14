@@ -12,6 +12,7 @@ twitter_username: mscaperoth
 github_username: scaperoth
 gplus_username: scaperoth
 disqus_username: scaperoth
+google_analytics: "UA-67559082-1"
 
 # Build settings
 markdown: kramdown
