@@ -8,6 +8,7 @@ layout: default
         <div class="masonry-posts">
             {% for post in paginator.posts %}
             <article role="article" class="post-item masonry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                <div class="post-date">
                 <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
                 <meta itemprop="datePublished" content="{{post.date}}">
                 <time datetime="{{ post.date | date_to_xmlschema }}">
@@ -19,6 +20,7 @@ layout: default
                     </span>
                 </time>
                 </a>
+                </div>
                 <div class="content">
                     <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
                     <div class="description">

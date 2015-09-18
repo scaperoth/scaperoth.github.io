@@ -146,9 +146,11 @@ section.welcome
     .masonry-section
         .masonry-posts
             padding 0 50px
-            -moz-column-count: 2;
-            -webkit-column-count: 2;
-            column-count: 2;
+            -moz-column-count: 1
+            -webkit-column-count 1
+            column-count 1
+            margin 0 auto
+            width 60%
 
             .post-item
                 display: inline-block;
@@ -156,21 +158,18 @@ section.welcome
                 padding: 1em;
                 margin: 0 0 1.5em;
                 width: 100%;
-                box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-                box-shadow: 1px 1px 1px 0 #ccc;
                 
                 .content
                     width 100%
                     float none
                     clear both
-
                 .datetime
                     text-align center
                     width 100%
                     float none
                     margin 0
+                    .day 
+                        color third
 
                 .post-title
 
