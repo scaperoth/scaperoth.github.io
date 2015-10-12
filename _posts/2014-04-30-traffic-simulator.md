@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Traffic Simulator"
-date: 2015-09-08 16:32:17
+date: 2014-04-30 16:32:17
 image: '/assets/img/project_screenshots/trafficsim.screenshot.png'
 image-description: "Screenshot of the simulator"
 image-position: top
