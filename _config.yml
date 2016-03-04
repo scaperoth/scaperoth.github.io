@@ -16,7 +16,7 @@ google_analytics: "UA-67559082-1"
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /:title/
 
 #pagination
