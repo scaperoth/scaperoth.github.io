@@ -14,7 +14,7 @@ tags:
 - Data Collection
 categories:
 - Gadgets
-twitter_text:
+twitter_text: 
 ---
 
 > The code for the front-end can be <a href="https://github.com/scaperoth/DogCaller" target="_blank">found on GitHub here</a> and the back-end for the raspberry pi, here can be <a href="https://github.com/scaperoth/ruby-noise-detection" target="_blank">found here</a>
