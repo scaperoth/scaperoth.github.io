@@ -21,7 +21,7 @@ twitter_text:
 
 Using the [ruby noise detection library](https://github.com/scaperoth/ruby-noise-detection){:target="_blank"}, that was edited from [@mmornati's](https://github.com/mmornati){:target="_blank"} original code, my goal was to be able to capture noise from a barking dog and turn that noise into readable data.
 
-The reason why it is called **The Dog \"Caller\"** is because the goal of this [gadget](categories#gadgets) is to help train our pups into being better while we are away. Using the Dog Caller we are able to track the behavior and, in turn, find out the triggers that cause the unwanted behavior. This device could even be hooked up to an intevention mechanism like a dog whistle or noise maker so that training doesn't have to stop when you are away.
+The reason why it is called **The Dog \"Caller\"** is because the goal of this [gadget](categories#gadgets) is to help train our pups into being better while we are away. Using the Dog Caller we are able to track the behavior and, in turn, find out the triggers that cause the unwanted behavior. This device could even be hooked up to an intervention mechanism like a dog whistle or noise maker so that training doesn't have to stop when you are away.
 
 ## Components
 * [Raspberry Pi](http://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=raspberry+pi){:target="_blank"}
