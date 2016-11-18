@@ -20,6 +20,7 @@ highlighter: rouge
 permalink: /:title/
 
 #pagination
+gems: [jekyll-paginate]
 paginate: 4
 paginate_path: "/posts/page:num/"
 
