@@ -2,7 +2,7 @@
 layout: post
 title: "Shiny and a Docker Container"
 date: 2019-06-17 19:52:17
-image: '/assets/img/project_screenshots/dockerShiny.screenshot.png'
+image: '/assets/img/project_screenshots/dockershiny.screenshot.png'
 image-description: "Screenshot of Shiny app"
 image-position: top
 description: How I created a local R Shiny server using Docker that could be deployed worldwide
@@ -88,13 +88,13 @@ RUN wget --no-verbose https://download3.rstudio.org/ubuntu-14.04/x86_64/VERSION 
     gdebi -n ss-latest.deb && \
     rm -f version.txt ss-latest.deb && \
     . /etc/environment && \
-    R -e "install.packages(c('Shiny', 'rmarkdown', 'tidyr', 'plyr', 'readr', 'ggvis'), repos='$MRAN')" && \
+    R -e "install.packages(c('shiny', 'rmarkdown', 'tidyr', 'plyr', 'readr', 'ggvis'), repos='$MRAN')" && \
     cp -R /usr/local/lib/R/site-library/shiny/examples/* /srv/shiny-server/ && \
-    chown Shiny:Shiny /var/lib/shiny-server
+    chown shiny:shiny /var/lib/shiny-server
 
 EXPOSE 3838
 
-COPY Shiny-server.sh /usr/bin/shiny-server.sh
+COPY shiny-server.sh /usr/bin/shiny-server.sh
 
 CMD ["/usr/bin/shiny-server.sh"]
 {% endhighlight %}
