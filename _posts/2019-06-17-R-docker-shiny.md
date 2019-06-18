@@ -144,8 +144,10 @@ Replacing 3838 with whatever port you want if necessary or you can just leave it
 
 ## Further reading
 
-The Docker documentation files are extremely helpful. Lots of people and organization use docker these days so there are lots of examples and things you can play with. Just ask and search around. You'd be surprised what you can find.
+- <a href="https://www.bjoern-hartmann.de/post/learn-how-to-dockerize-a-shinyapp-in-7-steps/" target="_blank">I found another article</a> by Bjoern Hartmann that I like better than my own. It can fill in some of the holes that I left out. It's another great tutorial that doesn't require rocker-org/shiny repository, but does require you to create your own project and Dockerfile.
 
-It may be worthwhile to look into hosting docker containers. I've done this before pretty easily with services like Amazon Web Services (AWS), but I'm sure there are at least a dozen good choices here. You could google something like "How do I host my docker container" and follow the trail to get started.
+- The Docker documentation files are extremely helpful. Lots of people and organization use docker these days so there are lots of examples and things you can play with. Just ask and search around. You'd be surprised what you can find.
 
-Also, you will want to make sure you know your Shiny app inside and out for this to really work. This way you can make sure you're installing all of the appropriate libraries. Also, when you go to check your application during testing, you can be sure if something is broken or not.
+- It may be worthwhile to look into hosting docker containers. I've done this before pretty easily with services like Amazon Web Services (AWS), but I'm sure there are at least a dozen good choices here. You could google something like "How do I host my docker container" and follow the trail to get started.
+
+- Also, you will want to make sure you know your Shiny app inside and out for this to really work. This way you can make sure you're installing all of the appropriate libraries. Also, when you go to check your application during testing, you can be sure if something is broken or not.
