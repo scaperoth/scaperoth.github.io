@@ -29,13 +29,13 @@ Specifically, this article will talk about implementation within a React applica
 
 I will talk about things that lots of other, more eloquent, writers have defined in great length. I recommend that if you find anything confusing or new, most of the terms I use here should be pretty standard and easy to find explained in full.
 
-*Containers*: Containers will be, as recommended by the creators of Redux, a dumb injector. The Containers will have functions and data that are required for the page, act as a placeholder for the structure, and have as little presentational value as possible.
+**Containers**: Containers will be, as recommended by the creators of Redux, a dumb injector. The Containers will have functions and data that are required for the page, act as a placeholder for the structure, and have as little presentational value as possible.
 
-*Components*: Components, like other articles have mentioned, will be nearly atomic levels of UI. Depending on this application, it could mean that a Component is a button, input, title, parallax image, etc. It can be anything that needs just a little bit more control than regular HTML/JSX tags.
+**Components**: Components, like other articles have mentioned, will be nearly atomic levels of UI. Depending on this application, it could mean that a Component is a button, input, title, parallax image, etc. It can be anything that needs just a little bit more control than regular HTML/JSX tags.
 
-*Composites*: Composites may be under a different name somewhere else and will be the least standard word in this article, but the name is derived from the idea of a composition of components. Composites act as the next step from Components and are much more specific to a Container.
+**Composites**: Composites may be under a different name somewhere else and will be the least standard word in this article, but the name is derived from the idea of a composition of components. Composites act as the next step from Components and are much more specific to a Container.
 
-*HOC*: HOCs are regular Higher Order Components. They can be used for wrapping Composites in reused behaviors. These behaviors may be CRUD operations that are found in several spots on the page, authentication for secured pages, or any other type of behavior that needs to be DRY and reusable.
+**HOC**: HOCs are regular Higher Order Components. They can be used for wrapping Composites in reused behaviors. These behaviors may be CRUD operations that are found in several spots on the page, authentication for secured pages, or any other type of behavior that needs to be DRY and reusable.
 
 ## The Structure
 
@@ -172,7 +172,7 @@ class PostPreview extends Component {
       <h1 className={'post-preview-title'}>{this.props.title}</h1>
       <Image src={this.props.image} alt={'Post Preview'}/>
       <p className={'post-preview-content'}>{this.props.content}</p>
-			<Button>Call to Action!</Button>
+      <Button>Call to Action!</Button>
     </div>
   )
 }
